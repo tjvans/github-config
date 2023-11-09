@@ -3,10 +3,6 @@ name: Format
 on:
   workflow_call:
 
-permissions:
-  contents: write
-  actions: write
-
 jobs:
   format-code:
     runs-on: ubuntu-latest
@@ -27,4 +23,3 @@ jobs:
         with:
           commit_message: Apply formating changes
           branch: ${{ github.head_ref }}
-          
