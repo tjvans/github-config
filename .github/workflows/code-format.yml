@@ -2,9 +2,6 @@ name: Format
 
 on:
   workflow_call:
-    secrets:
-      SHARED_WORKFLOW:
-        required: true
 
 jobs:
   format-code:
@@ -26,5 +23,4 @@ jobs:
         with:
           commit_message: Apply formating changes
           branch: ${{ github.head_ref }}
-          repo-token: ${{secrets.SHARED_WORKFLOW}}
           
